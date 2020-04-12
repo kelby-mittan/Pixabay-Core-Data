@@ -15,6 +15,12 @@
 		027A50892443A91200C87C5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 027A50872443A91200C87C5F /* LaunchScreen.storyboard */; };
 		027A50942443A91300C87C5F /* Pixabay_Core_DataTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50932443A91300C87C5F /* Pixabay_Core_DataTests.swift */; };
 		027A50A12443A9B200C87C5F /* ImageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 027A50A02443A9B200C87C5F /* ImageKit */; };
+		027A50A52443AC9C00C87C5F /* config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50A42443AC9C00C87C5F /* config.swift */; };
+		027A50A82443AD1500C87C5F /* PixAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50A72443AD1500C87C5F /* PixAPIClient.swift */; };
+		027A50AD2443B04500C87C5F /* PixSearch+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50A92443B04500C87C5F /* PixSearch+CoreDataClass.swift */; };
+		027A50AE2443B04500C87C5F /* PixSearch+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50AA2443B04500C87C5F /* PixSearch+CoreDataProperties.swift */; };
+		027A50AF2443B04500C87C5F /* PixImage+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50AB2443B04500C87C5F /* PixImage+CoreDataClass.swift */; };
+		027A50B02443B04500C87C5F /* PixImage+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027A50AC2443B04500C87C5F /* PixImage+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +45,12 @@
 		027A508F2443A91300C87C5F /* Pixabay-Core-DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Pixabay-Core-DataTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		027A50932443A91300C87C5F /* Pixabay_Core_DataTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pixabay_Core_DataTests.swift; sourceTree = "<group>"; };
 		027A50952443A91300C87C5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		027A50A42443AC9C00C87C5F /* config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = config.swift; sourceTree = "<group>"; };
+		027A50A72443AD1500C87C5F /* PixAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PixAPIClient.swift; sourceTree = "<group>"; };
+		027A50A92443B04500C87C5F /* PixSearch+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixSearch+CoreDataClass.swift"; sourceTree = "<group>"; };
+		027A50AA2443B04500C87C5F /* PixSearch+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixSearch+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		027A50AB2443B04500C87C5F /* PixImage+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixImage+CoreDataClass.swift"; sourceTree = "<group>"; };
+		027A50AC2443B04500C87C5F /* PixImage+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PixImage+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +93,7 @@
 		027A50782443A90F00C87C5F /* Pixabay-Core-Data */ = {
 			isa = PBXGroup;
 			children = (
+				027A50A62443ACEE00C87C5F /* API Client + Extensions */,
 				027A50A32443AB2900C87C5F /* Controllers + Cells */,
 				027A50A22443AB0E00C87C5F /* Models */,
 				027A509E2443A93300C87C5F /* Supporting Files */,
@@ -106,6 +119,7 @@
 				027A507F2443A90F00C87C5F /* Main.storyboard */,
 				027A50852443A91200C87C5F /* Assets.xcassets */,
 				027A50872443A91200C87C5F /* LaunchScreen.storyboard */,
+				027A50A42443AC9C00C87C5F /* config.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -113,6 +127,10 @@
 		027A50A22443AB0E00C87C5F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				027A50A92443B04500C87C5F /* PixSearch+CoreDataClass.swift */,
+				027A50AA2443B04500C87C5F /* PixSearch+CoreDataProperties.swift */,
+				027A50AB2443B04500C87C5F /* PixImage+CoreDataClass.swift */,
+				027A50AC2443B04500C87C5F /* PixImage+CoreDataProperties.swift */,
 				027A50822443A90F00C87C5F /* Pixabay_Core_Data.xcdatamodeld */,
 			);
 			path = Models;
@@ -123,6 +141,14 @@
 			children = (
 			);
 			path = "Controllers + Cells";
+			sourceTree = "<group>";
+		};
+		027A50A62443ACEE00C87C5F /* API Client + Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				027A50A72443AD1500C87C5F /* PixAPIClient.swift */,
+			);
+			path = "API Client + Extensions";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,9 +258,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				027A50A82443AD1500C87C5F /* PixAPIClient.swift in Sources */,
 				027A50842443A90F00C87C5F /* Pixabay_Core_Data.xcdatamodeld in Sources */,
+				027A50A52443AC9C00C87C5F /* config.swift in Sources */,
+				027A50AD2443B04500C87C5F /* PixSearch+CoreDataClass.swift in Sources */,
+				027A50B02443B04500C87C5F /* PixImage+CoreDataProperties.swift in Sources */,
 				027A507A2443A90F00C87C5F /* AppDelegate.swift in Sources */,
 				027A507C2443A90F00C87C5F /* SceneDelegate.swift in Sources */,
+				027A50AE2443B04500C87C5F /* PixSearch+CoreDataProperties.swift in Sources */,
+				027A50AF2443B04500C87C5F /* PixImage+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
